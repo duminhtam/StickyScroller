@@ -23,8 +23,6 @@
 		var $position = $el.offset().top;
 		var $id = stickScrollerCount;
 
-		console.log($position);
-
 		if(params.wrap){
 			$el.wrap('<div id="scrollMaster-' + $id + '" style="width: 100%;"' + (params.wrapClass != ''? ' class="' + params.wrapClass + '"' : "") + '>');
 			$el = $('#scrollMaster-' + $id);
@@ -37,7 +35,7 @@
 
 		$win.on('scroll', function(){
 			if(($win.scrollTop() >= $position && !params.hideAt) || ($win.scrollTop() >= $position && params.hideAt && $win.scrollTop() <= params.hideAt)){
-					$el.addClass('stickySlide').next().css('marginTop', $marginTopStick);
+				$el.addClass('stickySlide').next().css('marginTop', $marginTopStick);
 			}else{
 				$el.removeClass('stickySlide').next().css('marginTop', $marginTopUnstuck);
 			}
