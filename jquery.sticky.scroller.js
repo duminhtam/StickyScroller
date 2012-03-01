@@ -48,7 +48,7 @@
 	$.fn.stickyScroller.defaults = {
 		wrap: true,			// Whether to wrap the stick element with an outer div
 		wrapClass: '',		// Class applied to the wrap div
-		hideAt: 500			// Scroll distance to stop the element sticking
+		hideAt: 0			// Scroll distance to stop the element sticking
 	}
 
 })(jQuery);
